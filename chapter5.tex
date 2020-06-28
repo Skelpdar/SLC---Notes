@@ -1,13 +1,25 @@
 \section*{Chapter 5 - Syntax and
 Semantics}
 \subsection*{5.1 Introduction}
-Further thoughts about semantics are explored in chapter 5.14 and maybe the notation of structures here will be clearer once one has worked through the next sub-chapters. The point of semantics is to talk about {\it truth} of formulas, whereas syntax only concerns the construction of formulas.\footnote{A pedagogical explanation can be found in  \url{https://leanprover.github.io/logic_and_proof/semantics_of_first_order_logic.html}} 
-To clarify the notation of a structure, a structure for our exploration in first order logic contains three parts:
-\begin{itemize}
-    \item Our domain which is the set of atomics
-    \item The signature which is all functions and relations
-    \item Lastly the interpretations, in this case it is a satisfaction relation on the previous, which is our truth assignment 
-\end{itemize} 
-Our first order structures will be working with an interpretation called the satisfaction relation, explained as "A formula may be satisfied in a structure M relative to a variable assignment s, written as M,s $\models$ A." Where formula means a term and a predicate symbol. If the satisfaction is independent of the variable assignment, then we say that the formula is satisified in the structure. Such a formula independent of variable assignment is called a sentence.
+Further thoughts about semantics are explored in chapter 5.9 to 5.14 and maybe the notation of structures here will be clearer once one has worked through the next sub-chapters. The point of semantics is to talk about {\it truth} of formulas, whereas syntax only concerns the construction of formulas.\footnote{A pedagogical explanation can be found in  \url{https://leanprover.github.io/logic_and_proof/semantics_of_first_order_logic.html}} 
 
-Our satisfaction relation is therefore our interpretation of what is true or false, what is satisfied. When the notion of validity is introduced we see that some sentences are true in every model we build.
+Our first order structures will be working with an interpretation called the satisfaction relation, explained as "A formula may be satisfied in a structure M relative to a variable assignment s, written as M,s $\models$ A." Where formula means a term and a predicate symbol. If the satisfaction is independent of the variable assignment, then we say that the formula is satisfied in the structure. Such a formula independent of variable assignment is called a sentence.
+
+Our satisfaction relation is therefore our interpretation of what is true or false, what is satisfied. When the notion of validity is introduced we see that some sentences are true in all structures we build.
+
+\subsection*{5.2 First-Order Languages}
+Even though we are only working syntactically now and not semantically, it would be useful to construct the truth tables for the different logical connectives. 
+
+{\bf Example 5.1} may be given thought. Although they do not motivate what the unary (taking one variable/constant/term) function $\prime$ is, it could be thought as a successor function. In arithmetic as we know it this could be $\prime(x)=x+1$. Thus from the only constant variable $\circ$, the other terms (like the natural numbers) can be constructed by repeatedly applying $\prime$. Look up the {\it Peano axioms} if you want to read more about constructing arithemtic on the natural numbers. 
+
+\subsection*{5.4 Unique Readability}
+{\bf Lemma 5.8:}The proof that terms have an equal number of left and right parenthesis follows from a proof by induction, using Def. 5.4. 
+
+{\bf Lemma 5.10, sketch of proof:} Go back to Def. 5.5 for formulas and start of by showing that it holds true for atomic formulas.
+
+For proving that proper prefixes of non-atomic formulas are not formulas, one can use that fact that such a proper prefix must end in a logical connective of some sort. A string ending in a logical connective does not follow from the construction of formulas. 
+
+{\bf Lemma 5.11, sketch of proof:} These three cases are the only formulas defined as atomics. The proof is then about showing that these are not the same. 
+
+\subsection*{5.7}
+Now that sentences are defined, one can think about semantics again and how we assign interpretations (read truth values for us) to the different sentences. \footnote{\url{https://en.wikipedia.org/wiki/Sentence_(mathematical_logic)}}
